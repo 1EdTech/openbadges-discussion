@@ -1,4 +1,4 @@
-# OpenBadges Discussion
+# OpenBadges Development Discussion
 
 This is an issues-only repository for having conversations about general openbadges development.
 
@@ -18,5 +18,7 @@ So we do have a [mailing list](https://groups.google.com/forum/#!forum/openbadge
 3. When a discussion leads to an issue, conversation takes place in multiple locations. With an issues repo, the issue can be tied to the work that needs to be done (even cross-repository)
 4. Hard to embed code with proper syntax highlighting in email.
 5. The “too much email” problem. Some people may only care about specific issues, and with an issue repository users can “subscribe” to specific issues by raising/commenting on them (and even then choose whether to get email updates or not). If a user does care about everything going on, she can choose to “Watch” the repository and get updated on everything.
+
+Another pro to the issues repo is that it can (sort of) work as a mailing list – people don't necessarily need to sign into the github interface to comment since issues can be replied to via email. Creating a new topic will require signing in, though.
 
 All told, I think an issues repository provides a richer interface for having development-related conversations about the project and provides a better path for keeping track of ideas as they turn into code.

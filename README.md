@@ -1,4 +1,4 @@
-# OpenBadges Development Discussion
+# Open Badges Development Discussion
 
 This is an issues-only repository for having conversations about general openbadges development.
 

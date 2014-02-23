@@ -1,0 +1,21 @@
+{
+  "name": "Sample Extended Badge",
+  "description": "For doing awesome things in fairly standard ways.",
+  "image": "https://example.org/extended-badge-longcat.png",
+  "criteria": "https://example.org/extended-badge.html",
+  "tags": ["badgeClassExtensions"],
+  "issuer": "https://example.org/organization.json",
+  "badgeClassExtensions": [
+    {
+      "badgeSpecification": {
+      	"title": "Badge Age Target",
+        "reference": "http://this-domain.org/schema-age-target-v0.5.json",
+        "version": "0.5"
+      },
+      "content": {
+      	"age": "5-18",
+      	"grade": "K-12"
+      }
+    },
+  ]
+}

@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title" : "Open Badge BadgeClass Definition v1.1",
-	"description": "A suggested age or US grade range targeted by the described badge or learning experience. Use one or both options.",
+	"description": "A schematic defining how an issuer defines an open badge to issue to its users",
 	"type": "object",
 	"properties": {
 		"name": {

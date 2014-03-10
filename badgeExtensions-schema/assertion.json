@@ -13,5 +13,28 @@
   "verify": {
     "type": "hosted",
     "url": "https://example.org/assertions/007.json"
-  }
+  },
+  "extensions": [
+    {
+      "schema": {
+        "title": "Assertion Endorsement",
+        "reference": "http://this-domain.org/assertion-endorsement-v0.5.json",
+        "version": "0.5"
+      },
+      "content": {
+        "endorsement": {
+        "badge": "https://example.org/badgeClass.json",
+        "uid": "007",
+        "endorserName": "National Institute of Awesome",
+        "endorserWebsite": "http://example.com",
+        "endorserStatement": "This earner is especially deserving of this awesome badge.",
+        "endorsementURL": "http://example.com/007evidence.html"
+        },
+        "verify": {
+          "url": "http://example.com/NIA-public-key.key",
+          "signature": "sfw986ofifl.fowekrjr75oeokwj.woejroejliew0393jeleiwjeleij"
+        }
+      }
+    }
+  ]
 }

@@ -11,10 +11,7 @@
       	"title": "Badge Age Target",
         "reference": "http://this-domain.org/schema-age-target-v0.5.json",
         "version": "0.5",
-        "checksum": {
-          "alg": "sha1",
-          "hash": "fakefakefakefake"
-        }
+        "checksum": "sha1$cafbfd764fcdab3c238234746cb32938cbffada3"
       },
       "content": {
       	"age": "5-18",

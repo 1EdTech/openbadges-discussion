@@ -75,19 +75,8 @@
                 "type": "string"
               },
               "checksum": {
-                "description": "SHA-1 hash of the linked schema file so issuers may avoid downloading it repeatedly.",
-                "type": "object",
-                "properties": {
-                  "alg": {
-                    "description": "Hash algorithm. 'sha1' highly recommended",
-                    "type": "string"
-                  },
-                  "hash": {
-                    "description": "string resulting from the hash of the schema file",
-                    "type": "string"
-                  }
-                },
-                "required": ["alg", "hash"]
+                "description": "SHA-1 hash of the linked schema file so issuers may avoid downloading it repeatedly. use format: alg$hash",
+                "type": "string",
               }
             },
             "required": ["reference"]

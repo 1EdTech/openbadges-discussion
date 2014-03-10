@@ -18,5 +18,25 @@
       	"grade": "K-12"
       }
     },
+    {
+      "schema": {
+        "title": "Badge Class Endorsement",
+        "reference": "http://example.org/schema-badgeClass-endorsement.json",
+        "version": "0.5",
+        "checksum": "sha1$abcdef1234567890abcdef1234567890abcdef12 "
+      },
+      "content": {
+        "endorsement": {
+          "badgeClassURL": "http://example.org/badgeClass.json",
+          "endorserName": "Big University",
+          "endorserWebsite": "http://biguniversity.edu",
+          "endorserStatement": "This issuer issues badgeClass in a way that comports with our high standards."
+        },
+        "verify": {
+          "url": "https://biguniversity.edu/public-key.key",
+          "signature": "algjwigel.weue8339dldififiwo.23dse39ew30ke02kdjfi02edjdle"
+        }
+      }
+    }
   ]
 }

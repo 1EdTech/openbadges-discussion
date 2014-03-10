@@ -9,7 +9,11 @@
 			"type": "object",
 			"properties": {
 				"badgeClassURL": {
-					"description": "The URL of the badgeClass to be endorsed"
+					"description": "The URL of the badgeClass to be endorsed",
+					"type": "string"
+				},
+				"badgeClass": {
+					"$ref": "http://example.org/schema-badgeClass.json" 
 				},
 				"endorserName": {
 					"description": "The name of the party or organization endorsing this badge.",
@@ -24,7 +28,7 @@
 					"type": "string"
 				}
 			},
-			"required": ["badgeClassURL","endorserName","endorserWebsite"]
+			"required": ["endorserName","endorserWebsite"]
 		},
 		"verify": {
 			"description": "Verification object containing the URL of the endorser's public key and a signature generated to match.",

@@ -28,6 +28,14 @@
       "content": {
         "endorsement": {
           "badgeClassURL": "http://example.org/badgeClass.json",
+          "badgeClass": {
+            "name": "Sample Extended Badge",
+            "description": "For doing awesome things in fairly standard ways.",
+            "image": "https://example.org/extended-badge-longcat.png",
+            "criteria": "https://example.org/extended-badge.html",
+            "tags": ["badgeClassExtensions"],
+            "issuer": "https://example.org/organization.json"
+          },
           "endorserName": "Big University",
           "endorserWebsite": "http://biguniversity.edu",
           "endorserStatement": "This issuer issues badgeClass in a way that comports with our high standards."

@@ -5,9 +5,9 @@
   "criteria": "https://example.org/extended-badge.html",
   "tags": ["badgeClassExtensions"],
   "issuer": "https://example.org/organization.json",
-  "badgeClassExtensions": [
+  "extensions": [
     {
-      "badgeSpecification": {
+      "schema": {
       	"title": "Badge Age Target",
         "reference": "http://this-domain.org/schema-age-target-v0.5.json",
         "version": "0.5"

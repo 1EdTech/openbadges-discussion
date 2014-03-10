@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title" : "Badge Assertion Additional Text Evidence",
+	"description": "An extension that allows issuers to embed text-based evidence into the badge assertion.",
+	"type": "object",
+	"properties": {
+		"description": {
+			"description": "A description of the text evidence provided.",
+			"type":"string"
+		},
+		"evidence": {
+			"description": "Text based evidence of the user meeting the criteria of the badge beyond what is included in the core evidence URL",
+			"type": "string"
+		}
+	}
+}

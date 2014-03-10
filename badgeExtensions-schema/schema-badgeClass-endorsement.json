@@ -1,49 +1,49 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title" : "Badge Class Endorsement",
-	"description": "An outside endorsement of a badge and associated opportunities. The issuer may award this badge to many earners under this endorsement.",
-	"type": "object",
-	"properties": {
-		"endorsement": {
-			"description": "Collection of properties describing this endorsement.",
-			"type": "object",
-			"properties": {
-				"badgeClassURL": {
-					"description": "The URL of the badgeClass to be endorsed",
-					"type": "string"
-				},
-				"badgeClass": {
-					"$ref": "http://example.org/schema-badgeClass.json" 
-				},
-				"endorserName": {
-					"description": "The name of the party or organization endorsing this badge.",
-					"type": "string"
-				},
-				"endorserWebsite": {
-					"description": "URL of the website associated with the endorser.",
-					"type": "string"
-				},
-				"endorserStatement": {
-					"description": "Statement from the endorser about their endorsement decision.",
-					"type": "string"
-				}
-			},
-			"required": ["endorserName","endorserWebsite"]
-		},
-		"verify": {
-			"description": "Verification object containing the URL of the endorser's public key and a signature generated to match.",
-			"type": "object",
-			"properties": {
-				"url": {
-					"description": "URL of the hosted public key on the endorser's domain.",
-					"type": "string"
-				},
-				"signature": {
-					"description": "JSON Web Signature tying the endorsement object of this badgeClass extension to the endorser via the endorser's key.",
-					"type": "string"
-				}
-			},
-			"required": ["url","signature"]
-		}
-	}
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title" : "Badge Class Endorsement",
+  "description": "An outside endorsement of a badge and associated opportunities. The issuer may award this badge to many earners under this endorsement.",
+  "type": "object",
+  "properties": {
+    "endorsement": {
+      "description": "Collection of properties describing this endorsement.",
+      "type": "object",
+      "properties": {
+        "badgeClassURL": {
+          "description": "The URL of the badgeClass to be endorsed",
+          "type": "string"
+        },
+        "badgeClass": {
+          "$ref": "http://example.org/schema-badgeClass.json" 
+        },
+        "endorserName": {
+          "description": "The name of the party or organization endorsing this badge.",
+          "type": "string"
+        },
+        "endorserWebsite": {
+          "description": "URL of the website associated with the endorser.",
+          "type": "string"
+        },
+        "endorserStatement": {
+          "description": "Statement from the endorser about their endorsement decision.",
+          "type": "string"
+        }
+      },
+      "required": ["endorserName","endorserWebsite"]
+    },
+    "verify": {
+      "description": "Verification object containing the URL of the endorser's public key and a signature generated to match.",
+      "type": "object",
+      "properties": {
+        "url": {
+          "description": "URL of the hosted public key on the endorser's domain.",
+          "type": "string"
+        },
+        "signature": {
+          "description": "JSON Web Signature tying the endorsement object of this badgeClass extension to the endorser via the endorser's key.",
+          "type": "string"
+        }
+      },
+      "required": ["url","signature"]
+    }
+  }
 }

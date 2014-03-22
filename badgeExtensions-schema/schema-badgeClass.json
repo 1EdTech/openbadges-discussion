@@ -14,15 +14,18 @@
     },
     "image": {
       "description": "The URL of the image that represents the present achievement. It will be baked into a complete badge for each recipient.",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "criteria": {
       "description": "The URL of a human-readable page describing the criteria for earning the achievement. If the badge represents an educational achievement, consider marking up this up with LRMI.",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "issuer": {
       "description": "URL of an object describing the organization that issued the badge. Endpoint should be JSON following the IssuerOrganization schema",
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "tags": {
       "description": "An array of text: List of tags that describe the type of achievement.",
@@ -43,14 +46,16 @@
           },
           "url": {
             "description": "URL linking to the official description of the standard.",
-            "type": "string"
+            "type": "string",
+            "format": "uri"
           },
           "description": {
             "description": "Short description of the standard.",
             "type": "string"
           }
         },
-        "required": ["name","url"]
+        "required": ["name","url"],
+        "additionalProperties": false
       }
     },
     "extensions": {
@@ -64,11 +69,12 @@
             "properties": {
               "reference": {
                 "description": "URL to the JSON-schema file defining the structure of this extension",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "checksum": {
                 "description": "SHA-1 hash of the linked schema file so issuers may avoid downloading it repeatedly. use format: alg$hash",
-                "type": "string",
+                "type": "string"
               }
             },
             "required": ["reference"]

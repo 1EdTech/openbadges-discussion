@@ -21,7 +21,8 @@
 				},
 				"endorserWebsite": {
 					"description": "URL of the website associated with the endorser.",
-					"type": "string"
+					"type": "string",
+					"format": "uri"
 				},
 				"endorserStatement": {
 					"description": "Statement from the endorser about their endorsement decision for this particular earner.",
@@ -29,7 +30,8 @@
 				},
 				"endorsementURL": {
 					"description": "URL of a page with more information about this endorsement",
-					"type": "string"
+					"type": "string",
+					"format": "uri"
 				}
 			},
 			"required": ["uid","endorserName","endorserWebsite"]
@@ -40,7 +42,8 @@
 			"properties": {
 				"url": {
 					"description": "URL of the hosted public key on the endorser's domain.",
-					"type": "string"
+					"type": "string", 
+					"format": "uri"
 				},
 				"signature": {
 					"description": "JSON Web Signature (header.payload.signature) tying the endorsement to the endorser via the endorser's key. use the endorsement object as a JSON string as the payload.",

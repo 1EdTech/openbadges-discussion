@@ -74,7 +74,8 @@
               },
               "checksum": {
                 "description": "SHA-1 hash of the linked schema file so issuers may avoid downloading it repeatedly. use format: alg$hash",
-                "type": "string"
+                "type": "string",
+                "format": "^\\w+\\$\\w+$"
               }
             },
             "required": ["reference"]

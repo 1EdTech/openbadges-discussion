@@ -8,10 +8,8 @@
   "extensions": [
     {
       "schema": {
-      	"title": "Badge Age Target",
         "reference": "http://this-domain.org/schema-age-target-v0.5.json",
-        "version": "0.5",
-        "checksum": "sha1$cafbfd764fcdab3c238234746cb32938cbffada3"
+        "checksum": "sha1$596d1c1c7ab83eed4f62f445fe2489086c6e3d36"
       },
       "content": {
       	"age": "5-18",
@@ -20,10 +18,8 @@
     },
     {
       "schema": {
-        "title": "Badge Class Endorsement",
         "reference": "http://example.org/schema-badgeClass-endorsement.json",
-        "version": "0.5",
-        "checksum": "sha1$abcdef1234567890abcdef1234567890abcdef12 "
+        "checksum": "sha1$127d8889dacb4854b3142da64ef0e5cd2c270b5e"
       },
       "content": {
         "endorsement": {

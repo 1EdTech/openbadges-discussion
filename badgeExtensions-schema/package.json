@@ -1,0 +1,25 @@
+{
+  "name": "badgeExtension-demo",
+  "version": "0.0.0",
+  "description": "This is an issues-only repository for having conversations about general openbadges development.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mozilla/openbadges-discussion.git"
+  },
+  "author": "Nate Otto, Chris McAvoy",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mozilla/openbadges-discussion/issues"
+  },
+  "homepage": "https://github.com/mozilla/openbadges-discussion",
+  "dependencies": {
+    "tap": "~0.4.11"
+  }
+}

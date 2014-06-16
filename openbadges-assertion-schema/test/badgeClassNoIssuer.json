@@ -1,0 +1,6 @@
+{
+  "name": "Sample Extended Badge Missing Issuer",
+  "description": "For doing awesome things in fairly standard ways.",
+  "image": "https://example.org/extended-badge-longcat.png",
+  "criteria": "https://example.org/extended-badge.html"
+}

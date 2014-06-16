@@ -1,0 +1,14 @@
+{
+  "uid": "459248023d916dd4a84c420cf8ad3f978648bb19",
+  "recipient": {
+    "identity": "sha256$8ee467250478d0d78f07fecaf7e1949157dcd95699bee28e97d3eff1f1567872",
+    "type": "email",
+    "hashed": true
+  },
+  "badge": "http://young-basin-5816.herokuapp.com/public/systems/good/badges/open-edx-contributor",
+  "verify": {
+    "url": "http://young-basin-5816.herokuapp.com/public/assertions/459248023d916dd4a84c420cf8ad3f978648bb19",
+    "type": "hosted"
+  },
+  "issuedOn": 1399404880
+}

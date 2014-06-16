@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title" : "Open Badge BadgeAssertion Definition v1.1",
+  "description": "A schematic defining how an issuer defines an issued open badge",
+  "type": "object",
+  "properties": {
+    "uid": {
+      "description": "Unique Identifier for the badge. This is expected to be locally unique on a per-origin basis, not globally unique.",
+      "type": "string"
+    },
+    "recipient": {
+      "description": "The recipient of the badge.",
+      "type": "object",
+      "properties" : {
+        "identity": {
+          "description": "Either the hash of the identity or the plaintext value. If it's possible that the plaintext transmission and storage of the identity value would leak personally identifiable information, it is strongly recommended that an IdentityHash be used.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The type of identity.",
+          "type": "string"
+        },
+        "hashed": {
+          "description": "Whether or not the identity value is hashed.",
+          "type": "boolean"
+        },
+        "salt": {
+          "description": "If the recipient is hashed, this should contain the string used to salt the hash. If this value is not provided, it should be assumed that the hash was not salted.",
+          "type": "string"
+        }
+      }
+    },
+    "badge": {
+      "description": "URL that describes the type of badge being awarded. The endpoint should be a BadgeClass",
+      "type": "string"
+    },
+    "verify": {
+      "description": "Data to help a third party verify this assertion.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The type of verification method.",
+          "type": "string"
+        },
+        "url": {
+          "description": "If the type is 'hosted', this should be a URL pointing to the assertion on the issuer's server. If the type is 'signed', this should be a link to the issuer's public key.",
+          "type": "string"
+        }
+      }
+    },
+    "issuedOn": {
+      "description": "Date that the achievement was awarded.",
+      "type": ["string", "number"]
+    },
+    "image": {
+      "description": "URL of an image representing this user's achievement. This must be a PNG image, and if possible, the image should be prepared via the Baking specification.",
+      "type": "string"
+    },
+    "evidence": {
+      "description": "URL of the work that the recipient did to earn the achievement. This can be a page that links out to other pages if linking directly to the work is infeasible.",
+      "type": "string"
+    },
+    "expires": {
+      "description": "If the achievment has some notion of expiry, this indicates when a badge should no longer be considered valid.",
+      "type": "string"
+    }
+  },
+  "required": ["uid", "recipient", "badge"]
+}

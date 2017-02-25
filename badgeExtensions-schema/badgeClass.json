@@ -1,0 +1,55 @@
+{
+  "name": "Sample Extended Badge",
+  "description": "For doing awesome things in fairly standard ways.",
+  "image": "https://example.org/extended-badge-longcat.png",
+  "criteria": "https://example.org/extended-badge.html",
+  "tags": ["badgeClassExtensions"],
+  "issuer": "https://example.org/organization.json",
+  "extensions": [
+    {
+      "schema": {
+      	"title": "Badge Age Target",
+        "reference": "http://this-domain.org/schema-age-target-v0.5.json",
+        "version": "0.5",
+        "checksum": "sha1$cafbfd764fcdab3c238234746cb32938cbffada3"
+      },
+      "content": {
+      	"age": "5-18",
+      	"grade": "K-12"
+      }
+    },
+    {
+      "schema": {
+        "reference": "http://this-domain.org/schema-location-v0.5.json",
+        "checksum": "sha1$tb6y6232sd6uydjsey5h890gnsrytiysal9ekjvk"
+      },
+      "content": {
+      	"online": "http://onlineopportunity.com",
+    	  "physical_location": [
+          { 
+            "street_address": "123 Test Rd",
+            "city": "providence",
+            "state_province": "RI",
+            "zip_postal_code": "02903",
+            "country": "United States,
+            "geo_location": {
+              "latitude": 39.59554,  
+              "longitude": -75.17295
+            }
+          },
+          { 
+            "street_address": "456 Test Rd",
+            "city": "providence",
+            "state_province": "RI",
+            "zip_postal_code": "02903",
+            "country": "United States,
+            "geo_location": {
+              "latitude": 41.81871,  
+              "longitude": -71.41177
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

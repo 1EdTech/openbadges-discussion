@@ -1,0 +1,43 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title" : "Location Schema",
+	"description": "The location of where opportunity may be found. Could be online and/or in one or more locations.",
+  "type": "object",
+  "properties": {
+    "location": {
+      "type": "object",
+      "anyOf": [
+        { "$ref": "#/definitions/online" },
+        { "$ref": "#/definitions/physical_location" }
+      ]
+    },
+  },
+  "definitions": {
+    "online": { 
+      "description": "Online location of opportunity. Could be a sign up link.",
+      "type": "string", 
+      "format": "uri" 
+    },
+    "physical_location": {
+      "description": "Array of physical location(s) of opportunity",
+      "type": "array",
+      "items": {
+				"type": "object",
+				"properties": {
+					"street_address": {"type": "string"}
+					"city": {"type": "string"},
+					"state_province": {"type": "string"},
+					"zip_postal_code": {"type": "string"},
+					"country": {"type": "string"},
+					"geo_location": {
+					  "type": "object",  
+            "properties": {  
+              "latitude": { "type": "number" },  
+              "longitude": { "type": "number" }  
+            } 
+          }
+        }
+      }
+    }
+  }	
+}

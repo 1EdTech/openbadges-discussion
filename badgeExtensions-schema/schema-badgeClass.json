@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title" : "Open Badge BadgeClass Definition v1.1",
+  "description": "A schematic defining how an issuer defines an open badge to issue to its users",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "A name or title of the particular badge defined in the present badge class, which could then be issued to many recipients.",
+      "type": "string"
+    },
+    "description": {
+      "description": "A short description of the achievement represented by the present badge.",
+      "type": "string"
+    },
+    "image": {
+      "description": "The URL of the image that represents the present achievement. It will be baked into a complete badge for each recipient.",
+      "type": "string",
+      "format": "uri"
+    },
+    "criteria": {
+      "description": "The URL of a human-readable page describing the criteria for earning the achievement. If the badge represents an educational achievement, consider marking up this up with LRMI.",
+      "type": "string",
+      "format": "uri"
+    },
+    "issuer": {
+      "description": "URL of an object describing the organization that issued the badge. Endpoint should be JSON following the IssuerOrganization schema",
+      "type": "string",
+      "format": "uri"
+    },
+    "tags": {
+      "description": "An array of text: List of tags that describe the type of achievement.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "alignment": {
+      "description": "List of objects describing which educational standards this badge aligns to, if any. An array of AlignmentObjects.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Name of the alignment.",
+            "type": "string"
+          },
+          "url": {
+            "description": "URL linking to the official description of the standard.",
+            "type": "string",
+            "format": "uri"
+          },
+          "description": {
+            "description": "Short description of the standard.",
+            "type": "string"
+          }
+        },
+        "required": ["name","url"],
+        "additionalProperties": false
+      }
+    },
+    "extensions": {
+      "description": "An array of objects each linking to and fulfilling a schema for additional badge class information",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "reference": {
+                "description": "URL to the JSON-schema file defining the structure of this extension",
+                "type": "string",
+                "format": "uri"
+              },
+              "checksum": {
+                "description": "SHA-1 hash of the linked schema file so issuers may avoid downloading it repeatedly. use format: alg$hash",
+                "type": "string",
+                "pattern": "^\\w+\\$\\w+$"
+              }
+            },
+            "required": ["reference"]
+          },
+          "content": {
+            "type": "object"
+          }
+        },
+        "required": ["schema", "content"]
+      }
+    }
+  }
+}

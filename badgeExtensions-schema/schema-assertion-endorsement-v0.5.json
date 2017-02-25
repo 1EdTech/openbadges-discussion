@@ -1,0 +1,56 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title" : "Badge Assertion Endorsement",
+	"description": "An outside endorsement of a single awarded instance of a badge, pertaining solely to one earner.",
+	"type": "object",
+	"properties": {
+		"endorsement": {
+			"description": "Collection of properties describing this endorsement.",
+			"type": "object",
+			"properties": {
+				"badge": {
+					"description": "The URL of the badgeClass, as hosted on the issuer's site",
+					"type": "string"
+				},
+				"uid": {
+					"description": "The locally unique (per-issuer) ID of the badge assertion to be endorsed."
+				},
+				"endorserName": {
+					"description": "The name of the party or organization endorsing this badge instance.",
+					"type": "string"
+				},
+				"endorserWebsite": {
+					"description": "URL of the website associated with the endorser.",
+					"type": "string",
+					"format": "uri"
+				},
+				"endorserStatement": {
+					"description": "Statement from the endorser about their endorsement decision for this particular earner.",
+					"type": "string"
+				},
+				"endorsementURL": {
+					"description": "URL of a page with more information about this endorsement",
+					"type": "string",
+					"format": "uri"
+				}
+			},
+			"required": ["uid","endorserName","endorserWebsite"]
+		},
+		"verify": {
+			"description": "Verification object containing the URL of the endorser's public key and a signature generated to match.",
+			"type": "object",
+			"properties": {
+				"url": {
+					"description": "URL of the hosted public key on the endorser's domain.",
+					"type": "string", 
+					"format": "uri"
+				},
+				"signature": {
+					"description": "JSON Web Signature (header.payload.signature) tying the endorsement to the endorser via the endorser's key. use the endorsement object as a JSON string as the payload.",
+					"type": "string"
+				}
+			},
+			"required": ["url","signature"]
+		}
+	}
+}
